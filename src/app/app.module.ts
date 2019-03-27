@@ -16,11 +16,13 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconRegistry } from '@angular/material';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    HeaderComponent
   ],
   imports: [
     AppRoutingModule,
