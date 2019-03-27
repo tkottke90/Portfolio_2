@@ -1,8 +1,7 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes } from '@angular/router';
 import { NotfoundComponent } from './notfound/notfound.component';
 
-const routes: Routes = [
+const appRoutes: Routes = [
   { 
     path: 'about',
     loadChildren: './about/about.module#AboutModule'
@@ -27,10 +26,6 @@ const routes: Routes = [
     path: '**',
     component: NotfoundComponent
   }
-];
+]
 
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
-export class AppRoutingModule { }
+module.exports = appRoutes;
