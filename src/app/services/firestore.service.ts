@@ -7,6 +7,10 @@ import { AngularFirestore } from '@angular/fire/firestore';
 export class FirestoreService {
 
   constructor(
-    db: AngularFirestore
+    private db: AngularFirestore
   ) { }
+
+  async getAppDoc(metadata: 'Images') {
+    return await this.db.doc(`App/${metadata}`).get();
+  }
 }
