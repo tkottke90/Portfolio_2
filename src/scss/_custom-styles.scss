@@ -1,7 +1,50 @@
 @mixin material-app($theme) {
+    @include h4-theme($theme);
+    @include p-theme($theme);
     @include app-header-theme($theme);
 }
 
+@mixin p-theme($theme) {
+    $primary: map-get($theme, primary);
+    $accent: map-get($theme, accent);
+    $warn: map-get($theme, warn);
+
+    $background: map-get($theme, background);
+    $foreground: map-get($theme, foreground);
+
+    p[color="primary"] {
+        color: mat-color($primary);
+    }
+
+    p[color="accent"] {
+        color: mat-color($accent, 600);
+    }
+
+    p[color="warn"] {
+        color: mat-color($warn);
+    }
+}
+
+@mixin h4-theme($theme) {
+    $primary: map-get($theme, primary);
+    $accent: map-get($theme, accent);
+    $warn: map-get($theme, warn);
+
+    $background: map-get($theme, background);
+    $foreground: map-get($theme, foreground);
+
+    h4[color="primary"] {
+        color: mat-color($primary);
+    }
+
+    h4[color="accent"] {
+        color: mat-color($accent, 600);
+    }
+
+    h4[color="warn"] {
+        color: mat-color($warn);
+    }
+}
 
 @mixin app-header-theme($theme) {
     $primary: map-get($theme, primary);
