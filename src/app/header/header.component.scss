@@ -48,9 +48,14 @@
     grid-column: 3;
 
     display: none;
+
     @include media($breakpoint-phone) {
         display: block;
     }
+}
+
+.mat-menu-item.active {
+    display: none;
 }
 
 menu-icon {

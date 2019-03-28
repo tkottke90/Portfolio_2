@@ -9,9 +9,9 @@
 
 
 <mat-menu #headerMenu="matMenu" class="menu">
-  <button mat-menu-item>About</button>
-  <button mat-menu-item>Work</button>
-  <button mat-menu-item>Contact</button>
+  <button mat-menu-item routerLink="/about" routerLinkActive="active">About</button>
+  <button mat-menu-item routerLink="/work" routerLinkActive="active">Work</button>
+  <button mat-menu-item routerLink="/contact" routerLinkActive="active">Contact</button>
 </mat-menu>
 
 <button class="menu menu-icon" mat-button [matMenuTriggerFor]="headerMenu"><mat-icon class="" svgIcon="menu"></mat-icon></button>
