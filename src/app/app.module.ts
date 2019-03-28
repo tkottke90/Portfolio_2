@@ -16,13 +16,14 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconRegistry, MatIconModule } from '@angular/material';
 import { NotfoundComponent } from './notfound/notfound.component';
-import { HeaderComponent } from './header/header.component';
+
+// 
+import { HeaderModule } from './header/header.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NotfoundComponent,
-    HeaderComponent
+    NotfoundComponent
   ],
   imports: [
     AppRoutingModule,
@@ -32,7 +33,8 @@ import { HeaderComponent } from './header/header.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireStorageModule,
-    MatIconModule
+    MatIconModule,
+    HeaderModule
   ],
   providers: [],
   bootstrap: [AppComponent]
