@@ -1,19 +1,17 @@
 
-  <a router-link="/">
-    <h4 class="name header_name">Thomas Kottke</h4>
-  </a>
+<h4 routerLink="/" class="name header_name">Thomas Kottke</h4>
 
-  <div class="nav header_nav"> 
-    <button mat-button routerLink="/about" routerLinkActive="active">About</button>
-    <button mat-button routerLink="/work" routerLinkActive="active">Work</button>
-    <button mat-button routerLink="/contact" routerLinkActive="active">Contact</button>
-  </div>
+<div class="nav header_nav"> 
+  <button mat-button routerLink="/about" routerLinkActive="active">About</button>
+  <button mat-button routerLink="/work" routerLinkActive="active">Work</button>
+  <button mat-button routerLink="/contact" routerLinkActive="active">Contact</button>
+</div>
 
-  
-  <mat-menu #headerMenu="matMenu" class="menu">
-    <button mat-menu-item>About</button>
-    <button mat-menu-item>Work</button>
-    <button mat-menu-item>Contact</button>
-  </mat-menu>
 
-  <button class="menu menu-icon" mat-button [matMenuTriggerFor]="headerMenu"><mat-icon class="" svgIcon="menu"></mat-icon></button>
+<mat-menu #headerMenu="matMenu" class="menu">
+  <button mat-menu-item>About</button>
+  <button mat-menu-item>Work</button>
+  <button mat-menu-item>Contact</button>
+</mat-menu>
+
+<button class="menu menu-icon" mat-button [matMenuTriggerFor]="headerMenu"><mat-icon class="" svgIcon="menu"></mat-icon></button>

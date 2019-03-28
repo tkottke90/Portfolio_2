@@ -9,7 +9,6 @@
     align-items: center;
     padding: 1rem;
 
-    background-color: mat-color($app-primary);
 }
 
 
@@ -24,7 +23,7 @@
 
     & button {
         font-size: 1.25rem;
-        color: #fff;
+        // color: #fff;
 
         &.active {
             display: none;
@@ -33,7 +32,7 @@
 }
 
 .name { 
-    color: #fff;
+    // color: #fff;
     @include media($breakpoint-phone) {
         font-size: 1.25rem;
     }
