@@ -14,7 +14,7 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 
 // Angular Material
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatIconRegistry } from '@angular/material';
+import { MatIconRegistry, MatIconModule } from '@angular/material';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { HeaderComponent } from './header/header.component';
 
@@ -31,7 +31,8 @@ import { HeaderComponent } from './header/header.component';
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
-    AngularFireStorageModule
+    AngularFireStorageModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

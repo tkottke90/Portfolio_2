@@ -16,17 +16,18 @@ const routes: Routes = [
     loadChildren: './contact/contact.module#ContactModule'
   },
   {
-    path: 'admin'
+    path: 'admin',
+    redirectTo: '/' // TODO: Add Admin Module
   },
   {
     path: '',
     redirectTo: '/about',
     pathMatch: 'full'
   },
-  {
-    path: '**',
-    component: NotfoundComponent
-  }
+  // {
+  //   path: '**',
+  //   component: NotfoundComponent
+  // }
 ];
 
 @NgModule({
