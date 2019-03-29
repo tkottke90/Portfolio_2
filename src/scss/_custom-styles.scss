@@ -1,5 +1,6 @@
 @mixin material-app($theme) {
     @include h4-theme($theme);
+    @include h6-theme($theme);
     @include p-theme($theme);
     @include app-header-theme($theme);
 }
@@ -13,7 +14,7 @@
     $foreground: map-get($theme, foreground);
 
     p[color="primary"] {
-        color: mat-color($primary);
+        color: mat-color($primary, 900);
     }
 
     p[color="accent"] {
@@ -42,6 +43,31 @@
     }
 
     h4[color="warn"] {
+        color: mat-color($warn);
+    }
+}
+
+@mixin h6-theme($theme) {
+    $primary: map-get($theme, primary);
+    $accent: map-get($theme, accent);
+    $warn: map-get($theme, warn);
+
+    $background: map-get($theme, background);
+    $foreground: map-get($theme, foreground);
+
+    h6[color="primary"] {
+        color: mat-color($primary);
+    }
+
+    h6[color="primary-dark"] {
+        color: mat-color($primary, 900);
+    }
+
+    h6[color="accent"] {
+        color: mat-color($accent, 600);
+    }
+
+    h6[color="warn"] {
         color: mat-color($warn);
     }
 }
