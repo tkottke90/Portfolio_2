@@ -59,6 +59,10 @@
     align-items: center;
 
     &__headline {
+        @include media($breakpoint-tablet) {
+            font-size: 4.5rem;
+        }
+
         @include media($breakpoint-phone) {
             font-size: 3rem;
         }
@@ -67,6 +71,14 @@
     &__blerb {
         text-align: center;
         margin: 0 14rem;
+
+        @include media($breakpoint-project-grid) {
+            margin: 0 3rem;
+        }
+
+        @include media($breakpoint-tablet) {
+            font-size: 1.75rem;
+        }
 
         @include media($breakpoint-phone) {
             font-size: 1.125rem;
@@ -81,21 +93,45 @@
 
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: auto 1.25rem auto 1.25 auto 1.25 rem auto;
-
-    @include media($breakpoint-project-grid) {
-
-    }
-
+    grid-template-rows: auto 1.25rem auto 1.25rem auto 1.25rem auto;
 
     &__intro {
         grid-column: 1/3;
         grid-row: 1;
     }
+
+    &__interests {
+        grid-column: 1;
+        grid-row: 3
+    }
+
+    &__skills {
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    &__overview {
+        grid-column: 1/3;
+        grid-row: 4;
+    }
+
+    @include media($breakpoint-project-grid) {
+        grid-template-columns: 100%;
+        grid-template-rows: auto 1.25rem auto 1.25rem auto 1.25rem auto 1.25rem auto;
+    }
+
 }
 
 .intro {
     &__header {
         margin-bottom: 1rem;
     }
+
+    &__text {
+        font-size: 1.25rem;
+    }
+}
+
+.interests {
+    
 }
