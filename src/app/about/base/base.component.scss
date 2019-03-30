@@ -127,8 +127,6 @@
         //grid-template-rows: auto 1.25rem auto 1.25rem auto 1.25rem auto 1.25rem auto;
         grid-template-rows: repeat(4, auto 1.25rem);
 
-        margin: 1.5rem;
-
         &__intro {
           grid-column: 1;
           grid-row: 1;
@@ -151,6 +149,10 @@
           grid-column: 1;
           grid-row: 7;
       }
+    }
+
+    @include media ($breakpoint-phone) {
+        margin: 1.5rem;
     }
 
 }
