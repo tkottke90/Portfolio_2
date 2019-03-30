@@ -1,0 +1,23 @@
+@import '../../../scss/base.scss';
+
+section {
+  width: 100%;
+  height: calc(100vh - 4.3475rem);
+  overflow: hidden;
+
+  display: grid;
+
+  grid-template-columns: 65% 35%;
+  grid-template-rows: 3rem 1fr;
+
+  @include media($breakpoint-project-grid) {
+    grid-template-columns: 100%;
+    grid-template-rows: 3rem 3rem 3rem 1fr;
+  }
+}
+
+.title {
+  color: #fff;
+  text-align: center;
+  margin: auto 0;
+}

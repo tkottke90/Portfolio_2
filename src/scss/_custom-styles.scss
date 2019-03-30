@@ -4,6 +4,8 @@
     @include h6-theme($theme);
     @include p-theme($theme);
     @include app-header-theme($theme);
+
+    @include app-base-theme($theme);
 }
 
 @mixin p-theme($theme) {
@@ -119,6 +121,32 @@
         & .menu {
             color: #fff;
         }
+    }
+}
+
+@mixin app-base-theme($theme) {
+    $primary: map-get($theme, primary);
+    $accent: map-get($theme, accent);
+    $warn: map-get($theme, warn);
+
+    $background: map-get($theme, background);
+    $foreground: map-get($theme, foreground);
+
+    app-base section {
+        background-color: #fff;
+
+        &[color="primary"] {
+            background-color: mat-color($primary);
+        }
+
+        &[color="primary-900"] {
+            background-color: mat-color($primary, 900);
+        }
+
+        &[color="accent"] {
+            background-color: mat-color($accent);
+        }
+
     }
 }
 
