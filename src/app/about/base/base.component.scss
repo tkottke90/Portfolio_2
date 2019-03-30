@@ -165,8 +165,25 @@
 }
 
 .skills svg {
-    height: 12.5rem;
-    width: 25rem;
+  height: 12.5rem;
+  width: 25rem;
+
+  rect {
+    fill: rgba(0, 0, 255, 0.75);
+  }
+  
+  text {
+    font: normal 65px sans-serif;
+  }
+  
+  text.axis-label {
+    fill: green;
+  }
+  
+  text.data-label {
+    fill: #fff;
+    writing-mode: tb;
+  }
 }
 
 .overview {
@@ -199,7 +216,7 @@
     align-items: flex-end;
 
     & h6, p {
-        background-color: rgba(250, 250, 250, 0.6);
+        background-color: rgba(250, 250, 250, 0.85);
     }
 
     & p {
@@ -213,7 +230,7 @@
     align-items: flex-start;
 
     & h6, p {
-        background-color: rgba(250, 250, 250, 0.6);
+        background-color: rgba(250, 250, 250, 0.85);
     }
 
     & p {
