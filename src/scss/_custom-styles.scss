@@ -121,3 +121,36 @@
         }
     }
 }
+
+@mixin mat-button-theme($theme) {
+    $primary: map-get($theme, primary);
+    $accent: map-get($theme, accent);
+    $warn: map-get($theme, warn);
+
+    $background: map-get($theme, background);
+    $foreground: map-get($theme, foreground);
+
+    button {
+        &.mat-primary {
+            background-color: mat-color($primary, 700);
+            color: #fff;
+        }
+
+        &.mat-accent {
+            background-color: mat-color($accent, 700);
+            color: #fff
+        }
+
+        &.mat-warn {
+            background-color: mat-color($warn);
+            color: #fff;
+        }
+
+        &.mat-transparent {
+            background: transparent;
+            color: #fff;
+        }
+    }
+
+    
+}
