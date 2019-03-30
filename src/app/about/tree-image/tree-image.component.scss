@@ -35,8 +35,12 @@
   svg {
     height: 20rem;
 
+    @include media($breakpoint-project-grid) {
+      height: 18rem;
+    }
+
     @include media($breakpoint-phone) {
-      height: 200px;
+      height: 250px;
     }
   }
 
