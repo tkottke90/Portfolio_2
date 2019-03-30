@@ -108,6 +108,9 @@
     &__skills {
         grid-column: 2;
         grid-row: 3;
+
+        width: 100%;
+        height: 100%;
     }
 
     &__overview {
@@ -161,9 +164,13 @@
     }
 }
 
+.skills svg {
+    height: 12.5rem;
+    width: 25rem;
+}
+
 .overview {
     display: grid;
-    background-color: rgba(250, 250, 250, 0.2);
     grid-template-columns: 21.875rem 6.25rem 21.875rem;
     grid-template-rows: 2rem 1fr;
 
@@ -191,6 +198,10 @@
     flex-direction: column;
     align-items: flex-end;
 
+    & h6, p {
+        background-color: rgba(250, 250, 250, 0.6);
+    }
+
     & p {
         margin-bottom: 1rem;
     }
@@ -200,6 +211,10 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
+    & h6, p {
+        background-color: rgba(250, 250, 250, 0.6);
+    }
 
     & p {
         margin-bottom: 1rem;
