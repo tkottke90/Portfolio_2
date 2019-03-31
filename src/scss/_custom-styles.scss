@@ -150,6 +150,38 @@
     }
 }
 
+@mixin app-custom-input($theme) {
+    $primary: map-get($theme, primary);
+    $accent: map-get($theme, accent);
+    $warn: map-get($theme, warn);
+
+    $background: map-get($theme, background);
+    $foreground: map-get($theme, foreground);
+
+    app-custom-input {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 2rem 2rem;
+
+        &.input {
+            grid-column: 1/3;
+            grid-row: 2;
+        }
+
+        & label {
+            color: #fff;
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        & .required {
+            color: mat-color($accent, 800);
+            grid-column: 2;
+            grid-row: 1;
+        }
+    }
+}
+
 @mixin mat-button-theme($theme) {
     $primary: map-get($theme, primary);
     $accent: map-get($theme, accent);
