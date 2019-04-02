@@ -4,6 +4,7 @@
     @include h6-theme($theme);
     @include p-theme($theme);
     @include app-header-theme($theme);
+    @include contact-form-field($theme);
 
     @include app-base-theme($theme);
 }
@@ -150,7 +151,7 @@
     }
 }
 
-@mixin app-custom-input($theme) {
+@mixin contact-form-field($theme) {
     $primary: map-get($theme, primary);
     $accent: map-get($theme, accent);
     $warn: map-get($theme, warn);
@@ -158,26 +159,110 @@
     $background: map-get($theme, background);
     $foreground: map-get($theme, foreground);
 
-    app-custom-input {
+    .custom-form-group {
         display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: 2rem 2rem;
-
-        &.input {
-            grid-column: 1/3;
+        grid-template-rows: 1.5rem 1fr 1.5rem;
+        position: relative;
+    
+        & .custom-form-label {
+            grid-row: 1;
+        }
+        & .custom-form-field {
             grid-row: 2;
+            z-index: 10;
+            margin: 0.25rem 0;
         }
-
-        & label {
-            color: #fff;
-            grid-column: 1;
-            grid-row: 1;
+    
+        & .custom-form-error {
+            grid-row: 3; position: absolute;
+            z-index: 1;
         }
-
-        & .required {
-            color: mat-color($accent, 800);
-            grid-column: 2;
-            grid-row: 1;
+    }
+    
+    .custom-form-label {
+        color: #fff;
+        position: relative;
+    
+        &.lbl-required::after {
+            content: "*required";
+            position: absolute;
+            top: 0.5rem;
+            right: 0;
+            font-size: 0.75rem;
+    
+            color: mat-color($accent,300);
+        }
+    }
+    
+    .custom-form-field {
+        background-color: #fff;
+        border-radius: 5px;
+    
+        display: flex;
+        justify-content: space-between;
+    
+        position: relative;
+    
+        & textarea  {
+            height: 5rem;
+        }
+    
+        & input {
+            height: 1rem;
+            margin: 0.25rem 0;
+        }
+    
+        & textarea, input {
+            width: 90%;    
+            border: none;
+        }
+        
+    }
+    
+    .custom-form-error {
+        font-size: 0.75rem;
+    }
+    
+    .alert {
+        color: mat-color($warn, 800)
+    }
+    
+    mat-icon {
+        color: mat-color($primary, 800);
+    }
+    
+    .custom-form-actions {
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    .submit-btn {
+        border: 2px solid #fff;
+        color: #fff;
+        background-color: transparent;
+    
+        transition: 500ms;
+    
+        &:disabled {
+            border: 2px solid transparent;
+            color: darkgray;
+        }
+    
+        
+    
+    }
+    
+    // Vaidation Styles
+    
+    
+    
+    .mat-input-element.ng-touched {
+        &.ng-valid[required] {
+            border-left: 3px solid mat-color($accent, 800); /* green */
+        }
+    
+        &.ng-invalid:not(form) {
+            border-left: 3px solid mat-color($warn);
         }
     }
 }
@@ -209,6 +294,10 @@
         &.mat-transparent {
             background: transparent;
             color: #fff;
+        }
+
+        &.mat-no-border {
+            border: none;
         }
     }
 
