@@ -8,7 +8,7 @@
 
   display: grid;
 
-  grid-template-columns: 60% 40%;
+  grid-template-columns: 50% 50%;
   grid-template-rows: 3rem 2rem 1fr;
 
   @include media($breakpoint-project-grid) {
@@ -60,6 +60,30 @@
   color: #fff;
   text-align: center;
   margin: auto 0;
+}
+
+.image {
+  overflow: hidden;
+
+  margin: 0 3rem;
+
+  border-radius: 50%;
+
+  border: 3px solid #fff;
+  position: relative;
+
+  & img {
+      transform: translate(-33%, -36%) scale(0.35);
+
+      @include media(960px) {
+          transform: translate(-47%, -51.5%) scale(0.1);
+      }
+  }
+
+  @include media(960px) {
+      width: 100%;
+      padding-top: 100%;
+  }
 }
 
 .social {

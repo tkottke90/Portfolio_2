@@ -303,3 +303,29 @@
 
     
 }
+
+@mixin border-theme($theme) {
+    $primary: map-get($theme, primary);
+    $accent: map-get($theme, accent);
+    $warn: map-get($theme, warn);
+
+    $background: map-get($theme, background);
+    $foreground: map-get($theme, foreground);
+
+    
+
+    .theme-border {
+        &--all {
+            border-style: solid;
+            border-width: 3px; 
+        }
+        &--bottom {
+            border-bottom-style: solid;
+            border-bottom-width: 3px;
+        }
+        &--top {
+            border-top-style: solid;
+            border-top-width: 3px;
+        }
+    }
+}
