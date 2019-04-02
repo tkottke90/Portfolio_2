@@ -5,10 +5,9 @@ import { HeaderModule } from '../header/header.module';
 import { BaseComponent } from './base/base.component';
 import { ContactRoutingModule } from './contact-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
-import { CustomInputComponent } from './custom-input/custom-input.component';
 
 @NgModule({
-  declarations: [BaseComponent, CustomInputComponent],
+  declarations: [BaseComponent],
   imports: [
     CommonModule,
     ContactRoutingModule,
