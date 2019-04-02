@@ -13,7 +13,7 @@
 
   @include media($breakpoint-project-grid) {
     grid-template-columns: 100%;
-    grid-template-rows: 3rem 3rem 3rem 1fr;
+    grid-template-rows: 3rem 6.25rem 3rem 1fr;
   } 
 
   &__title {
@@ -75,14 +75,16 @@
   & img {
       transform: translate(-33%, -36%) scale(0.35);
 
-      @include media(960px) {
-          transform: translate(-47%, -51.5%) scale(0.1);
+      @include media($breakpoint-project-grid) {
+          transform: translate(-47%, -46.5%) scale(0.1);
       }
   }
 
-  @include media(960px) {
-      width: 100%;
-      padding-top: 100%;
+  @include media($breakpoint-project-grid) {
+      height: 6.25rem;
+      width: 6.25rem;
+
+      margin: auto;
   }
 }
 
