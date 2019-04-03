@@ -1,4 +1,4 @@
-import { MatButtonModule, MatFormFieldModule, MatIconModule } from '@angular/material';
+import { MatButtonModule, MatFormFieldModule, MatIconModule, MatInputModule } from '@angular/material';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderModule } from '../header/header.module';
@@ -15,6 +15,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule,
     MatButtonModule,
     MatFormFieldModule,
+    MatInputModule,
     MatIconModule
   ]
 })
