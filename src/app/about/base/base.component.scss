@@ -168,6 +168,22 @@
     }
 }
 
+.header {
+    padding-left: 1rem;
+
+    &::before, &::after {
+        bottom: -0.75rem
+    } 
+
+    &::before {
+        left: -1rem;
+    }
+
+    &::after {
+        right: -1rem;
+    }
+}
+
 .interests {
     & p {
         margin-bottom: 0.5rem;
