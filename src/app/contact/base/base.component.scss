@@ -59,7 +59,22 @@
 .title {
   color: #fff;
   text-align: center;
-  margin: auto 0;
+  margin: auto;
+
+  width: 75%;
+
+  &::before {
+    bottom: -0.75rem;
+    left: -1rem;
+
+    border-color: #fff;
+  }
+
+  &::after {
+    bottom: -0.75rem;
+    right: -1rem;
+    border-color: #fff;
+  }
 }
 
 .image {

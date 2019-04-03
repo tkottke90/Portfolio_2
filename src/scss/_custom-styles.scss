@@ -460,5 +460,25 @@
             @extend %node-before;
             @extend %node-after;
         }
+    
+        &--fill {
+            &-primary-dark {
+                &::before, &::after {
+                    background-color: mat-color($primary, 800);
+                }
+            }
+
+            &-accent {
+                &::before, &::after {
+                    background-color: mat-color($accent);
+                }
+            }
+
+            &-white {
+                &::before, &::after {
+                    background-color: #fff;
+                }
+            }
+        }
     }
 }
