@@ -5,6 +5,7 @@
     @include p-theme($theme);
     @include app-header-theme($theme);
     @include contact-form-field($theme);
+    @include border-theme($theme);
 
     @include app-base-theme($theme);
 }
@@ -313,19 +314,151 @@
     $foreground: map-get($theme, foreground);
 
     
+    
+    %border-all {
+        border-style: solid;
+        border-width: 3px;
+    }
 
-    .theme-border {
-        &--all {
-            border-style: solid;
-            border-width: 3px; 
+    %border-left {
+        border-left-style: solid;
+        border-left-width: 3px; 
+    }
+
+    %border-right {
+        border-right-style: solid;
+        border-right-width: 3px; 
+    }
+
+    %border-top {
+        border-top-style: solid;
+        border-top-width: 3px; 
+    }
+
+    %border-bottom {
+        border-bottom-style: solid;
+        border-bottom-width: 3px; 
+    }
+
+    .primary-border {
+        border-color: mat-color($primary);
+        @extend %border-all;
+
+        &--left {
+            border-left-color: mat-color($primary);
+            @extend %border-left;
         }
+
         &--bottom {
-            border-bottom-style: solid;
-            border-bottom-width: 3px;
+            border-bottom-color: mat-color($primary);
+            @extend %border-bottom;
         }
+
         &--top {
-            border-top-style: solid;
-            border-top-width: 3px;
+            border-top-color: mat-color($primary);
+            @extend %border-top;
+        }
+
+        &--right {
+            border-right-color: mat-color($primary);
+            @extend %border-right;
+        }
+    }
+
+    .accent-border {
+        border-color: mat-color($accent);
+        @extend %border-all;
+
+        &--left {
+            border-left-color: mat-color($accent);
+            @extend %border-left;
+        }
+
+        &--bottom {
+            border-bottom-color: mat-color($accent);
+            @extend %border-bottom;
+        }
+
+        &--top {
+            border-top-color: mat-color($accent);
+            @extend %border-top;
+        }
+
+        &--right {
+            border-right-color: mat-color($accent);
+            @extend %border-right;
+        }
+    }
+
+    .white-border {
+        border-color: #fff;
+        @extend %border-all;
+
+        &--left {
+            border-left-color: #fff;
+            @extend %border-left;
+        }
+
+        &--bottom {
+            border-bottom-color: #fff;
+            @extend %border-bottom;
+        }
+
+        &--top {
+            border-top-color: #fff;
+            @extend %border-top;
+        }
+
+        &--right {
+            border-right-color: #fff;
+            @extend %border-right;
+        }
+    }
+
+    %node-before {
+        position: relative;
+    
+        &::before {
+            position: absolute;
+    
+            content: '';
+            width: 1rem;
+            height: 1rem;
+    
+            background-color: mat-color($primary, 200);
+            border: 3px solid mat-color($primary);  
+            border-radius: 50%;        
+        }
+    }
+
+    %node-after {
+        position: relative;
+
+        &::after {
+            position: absolute;
+
+            content: '';
+            width: 1rem;
+            height: 1rem;
+
+            background-color: mat-color($primary, 200);
+            border: 3px solid mat-color($primary); 
+            border-radius: 50%;        
+        }
+    }
+
+    .border-node {
+        &--before {
+            @extend %node-before;
+        }
+
+        &--after {
+            @extend %node-after;
+        }
+
+        &--both {
+            @extend %node-before;
+            @extend %node-after;
         }
     }
 }
