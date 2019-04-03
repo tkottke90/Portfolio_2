@@ -366,26 +366,26 @@
     }
 
     .accent-border {
-        border-color: mat-color($accent);
+        border-color: mat-color($accent, 600);
         @extend %border-all;
 
         &--left {
-            border-left-color: mat-color($accent);
+            border-left-color: mat-color($accent, 600);
             @extend %border-left;
         }
 
         &--bottom {
-            border-bottom-color: mat-color($accent);
+            border-bottom-color: mat-color($accent, 600);
             @extend %border-bottom;
         }
 
         &--top {
-            border-top-color: mat-color($accent);
+            border-top-color: mat-color($accent, 600);
             @extend %border-top;
         }
 
         &--right {
-            border-right-color: mat-color($accent);
+            border-right-color: mat-color($accent, 600);
             @extend %border-right;
         }
     }
@@ -459,6 +459,26 @@
         &--both {
             @extend %node-before;
             @extend %node-after;
+        }
+
+        &--line-color {
+            &-primary-dark {
+                &::before, &::after {
+                    border-color: mat-color($primary, 800);
+                }
+            }
+
+            &-accent {
+                &::before, &::after {
+                    border-color: mat-color($accent, 600);
+                }
+            }
+
+            &-white {
+                &::before, &::after {
+                    border-color: #fff;
+                }
+            }
         }
     
         &--fill {
