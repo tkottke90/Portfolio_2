@@ -1,0 +1,28 @@
+version: 2
+
+jobs:
+  build:
+    docker:
+      -image: circleci/node:10.15
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+
+      - restore_cache:
+        keys:
+          -v1-dependencies-{{ checksum "package.json" }}
+
+          -v1-dependencies-
+      
+      - run: npm install
+
+      - save_cache:
+        paths:
+          -node_modules
+          key: key: v1-dependencies-{{ checksum "package.json" }}
+      
+      - run:
+          command: ./node_modules/.bin/firebase deploy --token="1/krA1qzdhmoRFvjQOYYft_JR-w4okRH-t1R4_1q141RQ"
+  
