@@ -11,6 +11,8 @@ jobs:
       - checkout
       
       - run: npm install
+
+      - run: ng build --prod=true
       
       - run:
           command: ./node_modules/.bin/firebase deploy --token="1/krA1qzdhmoRFvjQOYYft_JR-w4okRH-t1R4_1q141RQ"
