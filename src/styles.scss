@@ -1,1 +1,82 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+html,
+  body {
+    font-family: 'sans-serif';
+  }
+
+  h1 {
+    font-size: 6rem;
+  }
+
+  h2 {
+    font-size: 3.75rem;
+  }
+
+  h3 {
+    font-size: 3rem;
+  }
+
+  h4 {
+    font-size: 2.125rem;
+  }
+
+  h5 {
+    font-size: 1.5rem;
+  }
+
+  h6 {
+    font-size: 1.25rem;
+  }
+
+  .subtitle1 {
+    font-size: 1rem;
+  }
+
+  .subtitle2 {
+    font-size: 0.875rem;
+  }
+
+  .body1 {
+    font-size: 1rem;
+  }
+
+  .body2 {
+    font-size: 0.875rem;
+  }
+
+  .button-font {
+    font-size: 0.875rem;
+  }
+
+  .caption {
+    font-size: 0.75rem;
+  }
+
+  .italic {
+    font-style: italic;
+  }
+
+body {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  width: 100vw;
+  overflow: hidden;
+}
+
+button.mat-menu-item {
+    line-height: 24px !important;
+}
+a.mat-menu-item > mat-icon {
+    margin-bottom: 14px;
+}
+.mat-icon svg {
+    height: 24px;
+    width: 24px;
+}

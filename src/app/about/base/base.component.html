@@ -1,0 +1,103 @@
+<app-header></app-header>
+
+<div class="content">
+  <section class="greeting">
+    <svg class="background greeting__background" preserveAspectRatio="none" viewBox="0 0 1000 1000">
+
+      <image class="bkg-image background__bkg-image" preserveAspectRatio="none"
+        xlink:href="https://firebasestorage.googleapis.com/v0/b/op-7f877.appspot.com/o/portfolio2%2F37426823_10212355082933086_2951743310995128320_n.jpg?alt=media&token=f308deed-5208-4c59-8bbf-2684619c784b" />
+      <rect class="filter background__filter" />
+    </svg>
+    <div class="text-overlay greeting__text-overlay">
+      <h1 class="headline text-overlay__headline">Hi, I'm Thomas!</h1>
+      <h4 class="blerb text-overlay__blerb">I am a web developer living in La Crosse, WI. <br>I have a passion for
+        problem solving, good coffee, and creating clean, functional code. </h4>
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="intro about__intro">
+      <h4 color="accent" class="header intro__header accent-border--bottom border-node--both border-node--fill-white border-node--line-color-accent">About Me</h4>
+      <p color="accent" class="text intro__text">I am a life long learner and self-taught web developer. I have a
+        passion for learning about and leveraging technology to develop solutions that enhance our daily lives.</p>
+    </div>
+
+    <div class="interests about__interests">
+      <p color="primary">I enjoy working on both front and back end projects, developing Progressive Web Applications,
+        data collection and analysis, as well as artificial intelligence.</p>
+      <p color="primary">Currently I am focusing my time on developing 2 Progressive Web Applications. I am utilizing
+        technologies including Angular2, FeathersJS, and Docker to implement these solutions.</p>
+      <p color="primary">In my free time I am also working to develop hardware solutions to further enhance my other
+        hobbies. I using microcontrollers such as the Arduino Uno and Expressif ESP32 to design and build hardware
+        solutions.</p>
+    </div>
+
+    <div class="skills about__skills">
+
+      <svg viewBox="0 0 2000 1000" xmlns="http://www.w3.org/2000/svg">
+        <!-- Axis -->
+        <!--
+        <line x1="500" y1="950" x2="1950" y2="950" stroke="black" stroke-width="5" />
+        <line x1="500" y1="950" x2="500" y2="50" stroke="black" stroke-width="5" />
+        -->
+        
+        
+        <!-- Labels -->
+        <!--
+        <text x="40" y="280">Expert</text>
+        <line x1="50" y1="300" x2="1950" y2="300" stroke="black" stroke-width="5" stroke-dasharray="10" />
+
+        <text x="40" y="430">Proficient</text>
+        <line x1="50" y1="450" x2="1950" y2="450" stroke="black" stroke-width="5" stroke-dasharray="10" />
+
+        <text x="40" y="580">Comfortable</text>
+        <line x1="50" y1="600" x2="1950" y2="600" stroke="black" stroke-width="5" stroke-dasharray="10" />
+
+        <text x="40" y="730">Novice</text>
+        <line x1="50" y1="750" x2="1950" y2="750" stroke="black" stroke-width="5" stroke-dasharray="10" />
+        -->
+      </svg>
+
+    </div>
+
+    <div class="details about__overview">
+      <div class="overview details__overview">
+        <h5 color="primary" class="overview-header overview__header">My Life At A Glance:</h5>
+        <div class="work overview__work">
+          <h6 class="header" color="primary-dark">Web Development</h6>
+          <p>HTML5/CSS3/Javascript/Typescript</p>
+          <h6 class="header" color="primary-dark">Design</h6>
+          <p>Problem Solving/Planning</p>
+          <h6 class="header" color="primary-dark">Interacting</h6>
+          <p>Teamwork/Leadership/Customer Facing</p>
+          <h6 class="header" color="primary-dark">Front End Frameworks</h6>
+          <p>Angular 2+/Material Design/FeathersJS</p>
+          <h6 class="header" color="primary-dark">Databases</h6>
+          <p>Redis/SQL/NoSQL/Firebase</p>
+        </div>
+        <div class="play" class="play overview__play">
+          <h6 class="header" color="accent">Nature</h6>
+          <p>Camping/Hiking/Kayaking/Golf</p>
+          <h6 class="header" color="accent">Building</h6>
+          <p>Carpentry/Model Railroading/Homebrewing</p>
+          <h6 class="header" color="accent">Coding</h6>
+          <p>Arduino/C#/Typescript/Angular5</p>
+          <h6 class="header" color="accent">Socializing</h6>
+          <p>D&D/Meetups/Family Vineyard</p>
+          <h6 class="header" color="accent">Theater</h6>
+          <p>Sound Design/Set Design/Light Design</p>
+        </div>
+      </div>
+
+      <app-tree-image class="tree details__tree"></app-tree-image>
+    </div>
+
+  </section>
+
+  <section class="actions">
+    <h6 color="accent" class="work-name">Want to see what I am up to?</h6>
+    <button mat-button class="working-btn" color="accent" routerLink="/work">What I Am Working On</button>
+    <h6 color="accent" class="contact-name">Think I can help you with a project?</h6>
+    <button mat-button class="contact-btn" color="accent" routerLink="/contact">Contact Me</button>
+  </section>
+</div>

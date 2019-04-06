@@ -1,0 +1,71 @@
+<app-header></app-header>
+
+<section color="primary-900" class="contact">
+  <h4 class="title contact__title white-border--bottom border-node--both border-node--fill-primary-dark">Contact Me</h4>
+
+  <div class="image contact__image">
+    <img src="https://firebasestorage.googleapis.com/v0/b/op-7f877.appspot.com/o/portfolio2%2F37348975_10212355083613103_5855823974042173440_n.jpg?alt=media&token=5101d591-76c0-4537-bee3-5447db3230e9">
+  </div>
+
+  <div class="social contact__social">
+    <a href="https://www.linkedin.com/in/thomas-kottke-53127a86/" target="_blank" class="linkedin">
+      <mat-icon svgIcon="linkedin-box"></mat-icon>
+      <h5>Linkedin</h5>
+    </a>
+
+    <a href="https://github.com/tkottke90" class="Github" target="_blank">
+      <mat-icon svgIcon="github-circle"></mat-icon>
+      <h5>Github</h5>
+    </a>
+  </div>
+
+  <form class="form" [formGroup]="contactForm" class="form contact__form">
+    <h5 class="centered-text">OR</h5>
+    <h5 class="bottom-margin">Send me a message:</h5>
+    <!-- Name -->
+    <div class="custom-form-group">
+      <label class="custom-form-label lbl-required">Name</label>
+      <div class="custom-form-field">
+        <input matInput type="text" formControlName="name" id="name">
+      </div>
+      <div *ngIf="contactForm.controls.name.touched && contactForm.controls.name.errors?.required"
+        class="custom-form-error alert alert-danger">Name is required</div>
+    </div>
+
+    <!-- Email -->
+    <div class="custom-form-group">
+      <label class="custom-form-label lbl-required">Email</label>
+      <div class="custom-form-field">
+        <input matInput type="email" formControlName="email">
+      </div>
+      <div *ngIf="contactForm.controls.email.touched && contactForm.controls.email.errors?.required"
+        class="custom-form-error alert alert-danger">An email is required</div>
+      <div *ngIf="contactForm.controls.email.touched && contactForm.controls.email.errors?.email"
+        class="custom-form-error alert alert-danger">Invalid email address format</div>
+    </div>
+
+    <!-- Phone -->
+    <div class="custom-form-group">
+      <label class="custom-form-label lbl-required">Phone</label>
+      <div class="custom-form-field">
+        <input matInput type="tel" formControlName="phone" placeholder="7152345678" maxlength="10">
+      </div>
+    </div>
+
+    <!-- Message -->
+    <div class="custom-form-group">
+      <label class="custom-form-label lbl-required">Message</label>
+      <div class="custom-form-field">
+        <textarea matInput type="text" formControlName="message"></textarea>
+      </div>
+      <div *ngIf="contactForm.controls.message.touched && contactForm.controls.message.errors?.required"
+        class="custom-form-error alert alert-danger">Leave me a message!</div>
+    </div>
+
+    <!-- Submit -->
+    <div class="custom-form-actions">
+      <button mat-button color="no-border" type="submit" class="submit-btn btn-success form__submit-btn"
+        [disabled]="!contactForm.valid || this.submitted">Lets Chat!</button>
+    </div>
+  </form>
+</section>

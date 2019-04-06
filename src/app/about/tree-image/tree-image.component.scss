@@ -1,0 +1,97 @@
+@import '../../../scss/base.scss';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .container {
+    width: 100%;
+    
+    display: grid;
+    grid-template-columns: 5% 10% 85%;
+    
+    & .toggle {
+      grid-column: 2;
+    }
+    
+    & figure {
+      grid-column: 3;
+   
+    }
+  }
+
+  figure {
+    display: flex;
+    justify-content: center;
+  }
+
+  svg {
+    height: 20rem;
+
+    @include media($breakpoint-project-grid) {
+      height: 18rem;
+    }
+
+    @include media($breakpoint-phone) {
+      height: 250px;
+    }
+  }
+
+  .toggle {
+    height: 3rem;
+    margin-top: 1rem;
+    
+    border: 3px solid black;
+  }
+  
+  .tree {
+    background-color: white;
+    &.winter {
+      background-color: gray;
+    }
+  }
+  #winter,
+  #spring,
+  #summer,
+  #fall{
+      transition: 500ms ease-in;
+    
+    & path {
+      opacity: 0;
+      transition: 500ms ease-in-out;
+    }
+    
+    &.visible path{
+      opacity: 1;
+    }
+  }
+  
+  
+  #binary_tree.winter {
+    & circle {
+      transition: 500ms ease-in;
+      
+      &.blink-green {
+        fill: green;
+      }
+      
+      &.blink-red {
+        fill: red;
+      }
+    }
+  }
+  
+  .blink-green {
+    fill: green;
+  }
+  
+  .blink-red {
+    fill: red;
+  }

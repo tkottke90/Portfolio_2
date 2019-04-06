@@ -1,0 +1,17 @@
+
+<h4 routerLink="/" class="name header_name">Thomas Kottke</h4>
+
+<div class="nav header_nav"> 
+  <button mat-button color="transparent" routerLink="/about" routerLinkActive="active">About</button>
+  <button mat-button color="transparent" routerLink="/work" routerLinkActive="active">Work</button>
+  <button mat-button color="transparent" routerLink="/contact" routerLinkActive="active">Contact</button>
+</div>
+
+
+<mat-menu #headerMenu="matMenu" class="menu">
+  <button mat-menu-item routerLink="/about" routerLinkActive="active">About</button>
+  <button mat-menu-item routerLink="/work" routerLinkActive="active">Work</button>
+  <button mat-menu-item routerLink="/contact" routerLinkActive="active">Contact</button>
+</mat-menu>
+
+<button class="menu menu-icon" color="transparent" mat-button [matMenuTriggerFor]="headerMenu"><mat-icon class="" svgIcon="menu"></mat-icon></button>
