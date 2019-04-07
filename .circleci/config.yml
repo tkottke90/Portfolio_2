@@ -60,19 +60,19 @@ jobs:
     working_directory: ~/repo
     steps:
       - run:
-        name: Show current branch
-        command: echo ${CIRCLE_BRANCH}
+          name: Show current branch
+          command: echo ${CIRCLE_BRANCH}
 
       - restore_cache:
-        key: v1-dist-{{ .Environment.CIRCLE_BRANCH }}-{{ .Environment.CIRCLE_SHA1 }}
+          key: v1-dist-{{ .Environment.CIRCLE_BRANCH }}-{{ .Environment.CIRCLE_SHA1 }}
       
       - run:
-        name: Install Firebase
-        command: npm install --save-dev firebase-tools
+          name: Install Firebase
+          command: npm install --save-dev firebase-tools
 
       - run:
-        name: Deploy to Firebase
-        command: ./node_modules/.bin/firebase deploy --token="1/krA1qzdhmoRFvjQOYYft_JR-w4okRH-t1R4_1q141RQ"
+          name: Deploy to Firebase
+          command: ./node_modules/.bin/firebase deploy --token="1/krA1qzdhmoRFvjQOYYft_JR-w4okRH-t1R4_1q141RQ"
 
 workflows:
     version: 2
