@@ -16,7 +16,7 @@ jobs:
           command: pwd
       - restore_cache:
         keys:
-            - v1-dependencies-{{ checksum "package.json" }}
+          - v1-dependencies-{{ checksum "package.json" }}
 
       - run: 
         name: Install dependencies
