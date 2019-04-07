@@ -43,6 +43,9 @@ jobs:
       #     command: ./node_modules/.bin/firebase deploy --token="1/krA1qzdhmoRFvjQOYYft_JR-w4okRH-t1R4_1q141RQ"
   
   deploy: 
+    docker:
+      - image: circleci/node:10.15
+    
     working_directory: ~/repo
     steps:
       - run:
