@@ -70,6 +70,10 @@ jobs:
         name: Install Firebase
         command: npm install --save-dev firebase-tools
 
+      - run:
+        name: Deploy to Firebase
+        command: ./node_modules/.bin/firebase deploy --token="1/krA1qzdhmoRFvjQOYYft_JR-w4okRH-t1R4_1q141RQ"
+
 workflows:
     version: 2
     -deploy:
