@@ -31,6 +31,10 @@ jobs:
               - node_modules
 
       - run:
+          name: Install Angular CLI
+          command: npm install -g @angular/cli
+
+      - run:
           name: Show Angular version
           command: ng version
 
