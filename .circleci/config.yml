@@ -30,6 +30,10 @@ jobs:
           paths:
               - node_modules
 
+      - run:
+          name: Show Angular version
+          command: ng version
+
       - run: 
           name: Building
           command: ng build --prod=true
